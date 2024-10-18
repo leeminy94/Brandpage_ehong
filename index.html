@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ko" >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>이홍 브랜드페이지</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  <link rel="stylesheet" href="./css/ehong.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" ></head>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" ></script>
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">구매신청</h5>
+          <p>신청서 접수하시면 담당자가 연락드리겠습니다.</p>
+        </div>
+        <div class="modal-body">
+          <ul>
+            <li>
+              <label for="company">법인명</label>
+              <input type="text" id="company" placeholder="토마토페이">
+            </li>
+            <li>
+              <label for="nameid">담당자</label>
+              <input type="text" id="nameid" placeholder="토마토">
+            </li>
+            <li>
+              <label for="contacttel">담당자 연락처</label>
+              <input type="tel" id="contacttel" placeholder="010-1234-1234">
+            </li>
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#alertModal_ok">확인</button>
+         
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="openModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <img src="./img/logo.png" alt="">
+        
+        </div>
+        <div class="modal-body">
+          <p>만 19세 이상 음주 가능한 연령입니까?</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn" data-bs-dismiss="modal">YES</button>
+          <button type="button" class="btn"  data-bs-toggle="modal" data-bs-target="#openModal_no" data-bs-dismiss="modal">NO</button>
+        
+        </div>
+        <p>본 사이트는 만 19세 이상만 이용 가능합니다.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="openModal_no" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+         <img src="./img/logo.png" alt="">
+        </div>
+        <div class="modal-body">
+          <p>본 사이트는 만 19세 이상만 이용 가능합니다. <br>
+          책임있는 음주를 권장하고, 과도하고 부적절한 알코올 소비를 지양합니다. 따라서 귀하가 현재 위치한 국가에서 주류제품을 구입할 수 있는 법적연령이 아닌 경우, <br> 본 사이트의 이용이 제한됩니다.
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn" data-bs-dismiss="modal">확인</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">구매방법</h5>
+        
+        </div>
+
+        <div class="modal-body">   
+          <ul>
+              <li>
+                <input type="radio" name="order" id="order1" value="order1" >
+                <label for="order1">법인 구매입니다.</label>
+              </li>
+              <li>
+                <input type="radio" name="order" id="order2" value="order2" >
+                <label for="order2">개인 구매입니다.</label>
+              </li>        
+          </ul>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn" id="orderBtn">다음</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="alertModal_ok" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        
+        <div class="modal-body">
+          <p>담당자에게 전달되었습니다.
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button id="ao_btn" type="button" class="btn" data-bs-dismiss="modal" >확인</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="alertModal_ok2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">개인구매</h5>
+        </div>
+        <div class="modal-body">
+          <p>개인구매자는 통통몰에서 주류구매를 신청할 수 있습니다.
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button id="ao_btn" type="button" class="btn" data-bs-dismiss="modal" onclick="location.href='https://www.tongtongmall.net/'" >통통몰로 이동</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  
+  <!-- Modal 끝 -->
+</head>
+<body>
+ 
+<div id="version" class="version">
+<nav class="nav-sections" id="v_menu">
+  <div>
+    <a href="index.html"><img src="./img/logo.png" alt=""></a>
+    <ul class="menu">
+     
+      <li class="menu-item"><a class="menu-item-link active" href="#product">제품소개</a></li>
+
+      <li class="menu-item" data-bs-toggle="modal" data-bs-target="#orderModal"><a class="menu-item-modal">구매방법</a></li>
+
+      <li class="menu-item" data-bs-toggle="modal" data-bs-target="#exampleModal"><a class="menu-item-modal">구매신청</a></li>
+
+      <li class="menu-item"><a class="menu-item-link" href="#footer_cont">연락처</a></li>
+      
+      <div class="active-line"></div>
+    </ul>
+  </div>
+  
+</nav>
+
+<main id="main-content" class="page-sections">
+
+  <h2 class="section-title" id="product"></h2>
+
+  <section class="page-section" id="mc0">
+    <img src="./img/main.jpg" alt="" class="main_img">
+  </section>
+
+  <section class="page-section" id="mc1">
+    <div class="mc1_top">
+      <img class="mc1_img" src="./img/product_img.jpg" alt="">
+      <div class="mc1_txt">
+        <h4><img src="./img/logo.png" alt="">이홍주</h4>
+        <p class="blue2">중국  ｜  고량주  ｜  52도  ｜  500ml</p>
+        <p class="mt70px mb30px">이홍주는 수수 100%를 주 원료로 사용하여 만든 중국의 증류주입니다. <br><br>
+          부드럽고 깔끔한 맛과 은은한 농향(濃香)이 특징입니다. <br><br>
+          5년 숙성의 이홍주는 백두산 맑은물만을 사용하여 양조하는 최고급 고량주입니다. <br><br>
+          고량주 고급주의 기준인 52.3도로 18도 소주보다 목넘김이 부드럽습니다.
+        </p>
+        
+      </div>
+    </div>
+   
+  
+    <div id="case1">
+      <img class="case1_tit1" src="./img/tit1.png" alt="">
+      <ul>
+        <li>
+            <img src="./img/eat01.png" alt="">
+            <h4>스트레이트</h4>
+            <p>고량주 본연의 <br>맛을 즐기세요</p>
+        </li>
+        <li>
+            <img src="./img/eat02.png" alt="">
+            <h4>온더락</h4>
+            <p>스트레이트가 부담스럽다면 <br>
+              얼음과 부드럽게 즐기세요</p>
+        </li>
+      </ul>
+    </div>
+
+    <div id="case2">
+      <ul>
+        <li class="case2_01">
+          <img class="case2_enjoy02" src="./img/enjoy02.png" alt="">
+          <div>
+            <img class="case2_tit2" src="./img/tit2.png" alt="">
+            <h4>소중한 분께 선물하세요</h4>
+            <p class="only_pc">수수 100%를 주 원료로 사용하여 만든 <br> 5년 숙성의 백두산 맑은물만을 사용하여 <br> 양조하는 최고급 고량주 이홍주 </p>
+            <p class="only_mobile">수수 100%를 주 원료로 사용하여 만든 <br> 5년 숙성의 백두산 맑은물만을 사용하여<br> 양조하는  최고급 고량주 이홍주 </p>
+            <p>소중한 분께 선물하여 마음을 전하세요</p>
+          </div>
+        </li>
+        <li class="case2_02">
+          <img class="case2_enjoy01" src="./img/enjoy01.png" alt="">
+          <div>
+            <h4>모임 및 홈술로 즐기기</h4>
+            <p class="only_pc">목넘김이 부드럽고 뒷맛이 달콤하여 <br> 마신 후 사람을 즐겁게 하는 이홍주 </p>
+            <p class="only_mobile">목넘김이 부드럽고 뒷맛이 달콤하여 마신 후 <br> 사람을 즐겁게 하는 이홍주 </p>
+            <p class="only_pc">모임에서 함께 즐기고, 하루를 마친 후 홈술로 즐기세요</p>
+            <p class="only_mobile">모임에서 함께 즐기고, <br> 하루를 마친 후 홈술로 즐기세요</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+</main>
+<footer class="placeholder-section" id="footer_cont">
+  
+  <div>
+    <img src="./img/footer_logo.png" alt="">
+    <p>(주)엠토마토  대표이사 : 한기원 <br>사업자등록번호: 107-87-53376</p>
+    <p>주소 : 서울시 마포구 양화진 4길 32, 401호 (합정동, 토마토빌딩) <br>통신판매업신고번호 : 2024-서울마포-0313  </p>
+    
+    <p>구입문의 : 02-2128-3333 <br>
+      tongtongmall.net</p>
+  </div>
+  
+</footer>
+</div>
+ 
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+<script  src="./js/ehong.js"></script>
+ 
+</body>
+</html>
